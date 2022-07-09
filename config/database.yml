@@ -22,4 +22,7 @@ test:
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  adapter: psql
+  database: linktree_clone
+  username: linktree_clone
+  password: <%= ENV['LINKTREE_CLONE_DATABASE_PASSWORD']
